@@ -1,8 +1,5 @@
-// @flow
-
 import React from "react";
-
-import type { T_Highlight } from "../../src/types";
+import type { T_Highlight } from "../../../../AnnotatorCore/types";
 type T_ManuscriptHighlight = T_Highlight;
 
 type Props = {
@@ -14,18 +11,24 @@ const updateHash = highlight => {
   location.hash = `highlight-${highlight.id}`;
 };
 
+// togglePersonsHandler = () => {
+//   const show = this.state.showPersons;
+//   this.setState({showPersons: !show});
+// };
+
 function Sidebar({ highlights, resetHighlights }: Props) {
+
   return (
-    <div className="sidebar" style={{ width: "25vw" }}>
+    <div className="sidebar" style={{ width: "30vw" }}>
+
       <div className="description" style={{ padding: "1rem" }}>
-        <h2 style={{ marginBottom: "1rem" }}>react-pdf-highlighter</h2>
-
+        <h2 style={{ marginBottom: "1rem" }}> SAWAS </h2>
+        <h3> Smart anotation sematic tool </h3>
+        <button>
+          Recommandation link
+        </button>
         <p style={{ fontSize: "0.7rem" }}>
-          <a href="https://github.com/agentcooper/react-pdf-highlighter">
-            Open in GitHub
-          </a>
         </p>
-
         <p>
           <small>
             To create area highlight hold ⌥ Option key (Alt), then click and

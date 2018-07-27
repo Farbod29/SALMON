@@ -16,7 +16,7 @@ https://agentcooper.github.io/react-pdf-highlighter/
 ### Example
 
 See
-[`demo/src/App.js`](https://github.com/agentcooper/react-pdf-highlighter/blob/master/demo/src/App.js)
+[`demo/src/App.jsotator.js`](https://github.com/agentcooper/react-pdf-highlighter/blob/master/demo/src/App.js)
 for React component API example.
 
 While docs are in progress, feel free to check the source annotated with Flow
