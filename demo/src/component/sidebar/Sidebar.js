@@ -1,6 +1,7 @@
 import React from "react";
 import type { T_Highlight } from "../../../../AnnotatorCore/types";
 type T_ManuscriptHighlight = T_Highlight;
+import PropTypes from "prop-types";
 
 type Props = {
   highlights: Array<T_ManuscriptHighlight>,
@@ -10,23 +11,22 @@ type Props = {
 const updateHash = highlight => {
   location.hash = `highlight-${highlight.id}`;
 };
-
-// togglePersonsHandler = () => {
-//   const show = this.state.showPersons;
-//   this.setState({showPersons: !show});
-// };
-
+let show1 = false;
 function Sidebar({ highlights, resetHighlights }: Props) {
+
+  const togglePersonsHandler = () => {
+    return (show1 =  true);
+  };
 
   return (
     <div className="sidebar" style={{ width: "30vw" }}>
-
+      <button onClick={togglePersonsHandler}>
+        Reset highlights
+        hello my name is sosis
+      </button>
       <div className="description" style={{ padding: "1rem" }}>
-        <h2 style={{ marginBottom: "1rem" }}> SAWAS </h2>
-        <h3> Smart anotation sematic tool </h3>
-        <button>
-          Recommandation link
-        </button>
+        <h2 style={{ marginBottom: "1rem" }}>SAWAS </h2>
+        <h3>Smart anotation sematic tool</h3>
         <p style={{ fontSize: "0.7rem" }}>
         </p>
         <p>
@@ -36,7 +36,6 @@ function Sidebar({ highlights, resetHighlights }: Props) {
           </small>
         </p>
       </div>
-
       <ul className="sidebar__highlights">
         {highlights.map((highlight, index) => (
           <li
