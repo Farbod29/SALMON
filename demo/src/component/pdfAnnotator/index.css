@@ -9,7 +9,7 @@ body {
 
 .sidebar {
     overflow: auto;
-    color: rgb(119, 119, 119);
+    color: rgb(55, 58, 55);
     background: linear-gradient(
             rgb(249, 248, 247),
             rgb(251, 250, 248) 46px,
@@ -37,6 +37,7 @@ body {
 }
 
 .sidebar__highlight {
+    background-color: rgb(105, 181, 255);
     padding: 1rem;
     cursor: pointer;
     transition: background 140ms ease-in;
@@ -44,7 +45,7 @@ body {
 }
 
 .sidebar__highlight:hover {
-    background: rgba(58, 56, 52, 0.08);
+    background: rgba(181, 255, 31, 0.81);
 }
 
 a {

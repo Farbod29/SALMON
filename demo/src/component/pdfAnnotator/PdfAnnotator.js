@@ -1,36 +1,23 @@
 import React, { Component } from "react";
 
 import URLSearchParams from "url-search-params";
-import {
-  PdfLoader,
-  PdfAnnotator,
-  Tip,
-  Highlight,
-  Popup,
-  AreaHighlight
-} from "../../../../AnnotatorCore";
+import { PdfLoader, PdfAnnotator, Tip, Highlight, Popup, AreaHighlight } from "../../../../AnnotatorCore";
 
 import testHighlights from "../../test-highlights";
-
 import Spinner from "./../spinner/Spinner";
 import Sidebar from "./../../component/sidebar/Sidebar";
 
 import type { T_Highlight, T_NewHighlight } from "../../../../AnnotatorCore/types";
-
 import "./index.css";
-
 type T_ManuscriptHighlight = T_Highlight;
-
 type Props = {};
+
 
 type State = {
   highlights: Array<T_ManuscriptHighlight>
 };
-
 const getNextId = () => String(Math.random()).slice(2);
-
 const parseIdFromHash = () => location.hash.slice("#highlight-".length);
-
 const resetHash = () => {
   location.hash = "";
 };
@@ -43,7 +30,6 @@ const HighlightPopup = ({ comment }) =>
   ) : null;
 
 const DEFAULT_URL = "https://arxiv.org/pdf/1708.08021.pdf";
-
 const searchParams = new URLSearchParams(location.search);
 const url = searchParams.get("url") || DEFAULT_URL;
 
@@ -185,7 +171,6 @@ class PdfAnnotator2 extends Component<Props, State> {
                       }}
                     />
                   );
-
                   return (
                     <Popup
                       popupContent={<HighlightPopup {...highlight} />}

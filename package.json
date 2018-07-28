@@ -1,7 +1,7 @@
 {
-  "name": "react-pdf-highlighter",
-  "version": "1.0.0",
-  "description": "Set of React components for PDF annotation",
+  "name": "SAWAS",
+  "version": "1.2.0",
+  "description": "Set of React components for semantic PDF annotation",
   "main": "lib/index.js",
   "scripts": {
     "build": "nwb build-react-component",
@@ -18,10 +18,31 @@
     "prettier": "prettier --write 'src/**/*.js' 'demo/src/**/*.js'"
   },
   "dependencies": {
+    "@material-ui/core": "^1.2.3",
+    "@material-ui/icons": "^1.1.0",
+    "ajv": "^6.5.1",
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
     "lodash": "^4.17.10",
     "pdfjs-dist": "2.0.489",
+    "qrcode-react": "^0.1.16",
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.1",
+    "react-file-base64": "^1.0.3",
+    "react-native-link-preview": "^1.3.4",
+    "react-pdf-highlighter": "^2.0.0",
     "react-pointable": "^1.1.1",
-    "react-rnd": "^7.1.5"
+    "react-qr-scanner": "0.0.7",
+    "react-rnd": "^7.1.5",
+    "react-router": "^4.3.1",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-select": "^1.2.1",
+    "react-spinners": "^0.3.2",
+    "reactstrap": "^6.0.1",
+    "webpack": "^3.0.0"
   },
   "peerDependencies": {
     "react": ">=0.14",
@@ -32,7 +53,7 @@
     "flow-copy-source": "^1.1.0",
     "gh-pages": "0.11.0",
     "husky": "0.11.9",
-    "nwb": "0.21.0",
+    "nwb": "^0.21.0",
     "prettier": "^1.8.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

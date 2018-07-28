@@ -1,7 +1,7 @@
 import React from "react";
 import type { T_Highlight } from "../../../../AnnotatorCore/types";
 type T_ManuscriptHighlight = T_Highlight;
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 
 type Props = {
   highlights: Array<T_ManuscriptHighlight>,
@@ -18,11 +18,19 @@ function Sidebar({ highlights, resetHighlights }: Props) {
     return (show1 =  true);
   };
 
+  let persons = null;
+  if (show1) {
+    persons = (
+      <div>
+        sosis
+      </div>
+    );
+  }
+
   return (
     <div className="sidebar" style={{ width: "30vw" }}>
       <button onClick={togglePersonsHandler}>
-        Reset highlights
-        hello my name is sosis
+        toggle
       </button>
       <div className="description" style={{ padding: "1rem" }}>
         <h2 style={{ marginBottom: "1rem" }}>SAWAS </h2>
@@ -57,6 +65,9 @@ function Sidebar({ highlights, resetHighlights }: Props) {
                   className="highlight__image"
                   style={{ marginTop: "0.5rem" }}
                 >
+                  <div>
+                    {persons}
+                  </div>
                   <img src={highlight.content.image} alt={"Screenshot"} />
                 </div>
               ) : null}
