@@ -1,10 +1,8 @@
-// @flow
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-import PdfAnnotator from "./components/PdfAnnotator";
-import Tip from "./components/Tip";
-import Highlight from "./components/Highlight";
-import Popup from "./components/Popup";
-import AreaHighlight from "./components/AreaHighlight";
-import PdfLoader from "./components/PdfLoader";
-
-export { PdfAnnotator, Tip, Highlight, Popup, AreaHighlight, PdfLoader };
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
